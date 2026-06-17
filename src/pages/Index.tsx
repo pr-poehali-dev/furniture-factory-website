@@ -64,13 +64,45 @@ const STEPS = [
 ];
 
 const CATALOG = [
-  { icon:"Armchair",  title:"Диваны",         sub:"Модульные, угловые, прямые",         badge:"Хит" },
-  { icon:"Sofa",      title:"Кресла",          sub:"Для дома и офиса",                   badge:"" },
-  { icon:"BedDouble", title:"Кровати",         sub:"Мягкие, с металлическим каркасом",   badge:"" },
-  { icon:"Trees",     title:"Садовая мебель",  sub:"Из искусственного ротанга",          badge:"Сезон" },
-  { icon:"Circle",    title:"Коконы",          sub:"Подвесные кресла — новинка",         badge:"Новинка" },
-  { icon:"Settings",  title:"Под заказ",       sub:"Индивидуальные партии для сетей",    badge:"" },
+  {
+    icon:"Armchair",  title:"Диваны",  sub:"Модульные, угловые, прямые",  badge:"Хит",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/7325a543-7ef1-4cea-a97c-9cfafe3d6a21.jpg",
+    desc: "Производим диваны всех форматов: прямые, угловые, модульные. Каркас — собственный металл, ткань — фирменная рогожка. Подходят для жилых и коммерческих пространств. Работаем на поставку крупным торговым сетям.",
+    features: ["Металлокаркас собственного производства", "Ткань-рогожка или велюр", "Модульные и угловые конфигурации", "Оптовые партии от 50 шт."],
+  },
+  {
+    icon:"Sofa",  title:"Кресла",  sub:"Для дома и офиса",  badge:"",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/c9c54e20-e665-472d-9f09-aad1c338e3b8.jpg",
+    desc: "Кресла для дома, переговорных и лобби. Широкая линейка форм: классика, скандинавский стиль, мягкий минимализм. Все модели — на металлических или деревянных ножках собственного производства.",
+    features: ["Ножки — металл или пластик", "Широкая палитра обивки", "Жёсткий и мягкий вариант сиденья", "Малые и средние серии"],
+  },
+  {
+    icon:"BedDouble",  title:"Кровати",  sub:"Мягкие, с металлическим каркасом",  badge:"",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/dd29b822-9531-4b96-ad0a-3d3de3f14236.jpg",
+    desc: "Мягкие кровати с мягким изголовьем на сварном металлическом каркасе. Разные размеры: 140, 160, 180 см. Возможно исполнение с ящиком для хранения. Подходят для сетевых мебельных магазинов и отельного сегмента.",
+    features: ["Размеры 140 / 160 / 180 см", "Изголовье — ткань, экокожа", "Вариант с подъёмным механизмом", "Партии для отельного сегмента"],
+  },
+  {
+    icon:"Trees",  title:"Садовая мебель",  sub:"Из искусственного ротанга",  badge:"Сезон",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/87a80901-5fe0-4f57-8cda-3653bdc09e74.jpg",
+    desc: "Комплекты для террас, веранд и загородных домов. Лоза из ПВХ — собственное производство. Устойчива к UV, морозу и влаге. Алюминиевый или стальной каркас с порошковым покрытием.",
+    features: ["ПВХ-лоза собственного производства", "UV и морозостойкость", "Алюминиевый или стальной каркас", "Комплекты и отдельные предметы"],
+  },
+  {
+    icon:"Circle",  title:"Коконы",  sub:"Подвесные кресла — новинка",  badge:"Новинка",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/ec4c509b-1cf7-4ea8-85b3-993b8f771edd.jpg",
+    desc: "Подвесные кресла-коконы из искусственного ротанга — наша новинка этого сезона. Стали одним из самых продаваемых товаров в категории садовой мебели. Подходят для улицы и закрытых помещений.",
+    features: ["Искусственный ротанг ПВХ", "Металлический каркас-подставка в комплекте", "Для улицы и интерьера", "Хит продаж 2024–2025"],
+  },
+  {
+    icon:"Settings",  title:"Под заказ",  sub:"Индивидуальные партии для сетей",  badge:"",
+    img: "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
+    desc: "Разрабатываем и производим мебель по техническому заданию заказчика. Работаем с сетевыми ретейлерами, девелоперами и крупными b2b-клиентами. От эскиза до серийного производства — всё под одной крышей.",
+    features: ["Разработка по ТЗ заказчика", "Собственный дизайн-отдел", "Производство от 100 единиц", "Сопровождение поставки"],
+  },
 ];
+
+type CatalogItem = typeof CATALOG[number];
 
 /* ── component ───────────────────────────────── */
 export default function Index() {
@@ -79,6 +111,7 @@ export default function Index() {
   const [activeStep, setActiveStep] = useState(0);
   const [form,       setForm]       = useState({ name:"", phone:"", message:"" });
   const [sent,       setSent]       = useState(false);
+  const [popup,      setPopup]      = useState<CatalogItem | null>(null);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -373,7 +406,8 @@ export default function Index() {
             {CATALOG.map((item, i) => (
               <div
                 key={i}
-                className={`group relative bg-white border border-border p-8 hover-lift-soft transition-all duration-700 ${
+                onClick={() => setPopup(item)}
+                className={`group relative bg-white border border-border p-8 hover-lift-soft cursor-pointer transition-all duration-700 ${
                   s.catalog.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay:`${i * 80}ms` }}
@@ -573,6 +607,87 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* ── CATALOG POPUP ───────────────────────── */}
+      {popup && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+          onClick={() => setPopup(null)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" style={{ animation:"fadeIn 0.3s ease forwards" }} />
+
+          {/* Modal */}
+          <div
+            className="relative bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl"
+            style={{ animation:"fadeUp 0.35s cubic-bezier(0.25,0.46,0.45,0.94) forwards" }}
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              onClick={() => setPopup(null)}
+              className="absolute top-5 right-5 z-10 w-9 h-9 flex items-center justify-center border border-border hover:border-gold hover:text-gold transition-colors duration-200"
+            >
+              <Icon name="X" size={14} />
+            </button>
+
+            {/* Photo */}
+            <div className="relative h-64 md:h-80 overflow-hidden">
+              <img src={popup.img} alt={popup.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent" />
+              {popup.badge && (
+                <span className="absolute top-5 left-5 bg-gold text-white font-sans-premium text-[0.52rem] tracking-[0.2em] uppercase px-3 py-1.5">
+                  {popup.badge}
+                </span>
+              )}
+            </div>
+
+            {/* Content */}
+            <div className="p-8 md:p-12">
+              <p className="font-sans-premium text-[0.58rem] tracking-[0.28em] uppercase text-gold mb-3 flex items-center gap-2">
+                <span className="w-6 h-px bg-gold inline-block" />
+                Категория продукции
+              </p>
+              <h2 className="font-serif text-4xl font-light mb-5 gold-line">{popup.title}</h2>
+              <p className="font-sans-premium text-sm font-light text-muted-foreground leading-relaxed tracking-wide mb-8">
+                {popup.desc}
+              </p>
+
+              {/* Features */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                {popup.features.map((f, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center mt-0.5">
+                      <div className="w-1.5 h-1.5 bg-gold rounded-full" />
+                    </div>
+                    <span className="font-sans-premium text-[0.65rem] tracking-wide text-foreground leading-relaxed">{f}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#contacts"
+                  onClick={() => setPopup(null)}
+                  className="flex-1 bg-gold text-white py-4 font-sans-premium text-[0.68rem] tracking-[0.22em] uppercase text-center
+                             hover:bg-gold-light transition-colors duration-300 flex items-center justify-center gap-2"
+                >
+                  <Icon name="Send" size={13} />
+                  Оставить заявку
+                </a>
+                <button
+                  onClick={() => setPopup(null)}
+                  className="flex-1 border border-border text-muted-foreground py-4 font-sans-premium text-[0.68rem] tracking-[0.22em] uppercase
+                             hover:border-gold hover:text-gold transition-colors duration-300"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
