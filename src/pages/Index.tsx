@@ -97,17 +97,23 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground font-serif">
 
       {/* ── NAV ─────────────────────────────────── */}
-      <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm border-b border-[hsl(var(--border))]" : "bg-transparent"
+      <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white border-b border-border shadow-sm"
+          : "bg-foreground/40 backdrop-blur-sm"
       }`}>
         <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
 
           {/* Logo */}
           <a href="#home" className="flex flex-col">
-            <span className="font-serif text-2xl font-light tracking-[0.12em] text-foreground leading-none">
+            <span className={`font-serif text-2xl font-light tracking-[0.12em] leading-none transition-colors duration-300 ${
+              scrolled ? "text-foreground" : "text-white"
+            }`}>
               МЕБЕЛЬ<span className="text-gold">ФАБРИКА</span>
             </span>
-            <span className="font-sans-premium text-[0.55rem] tracking-[0.28em] text-muted-foreground uppercase mt-0.5">
+            <span className={`font-sans-premium text-[0.55rem] tracking-[0.25em] uppercase mt-0.5 transition-colors duration-300 ${
+              scrolled ? "text-muted-foreground" : "text-white/70"
+            }`}>
               Производство полного цикла · с 2016
             </span>
           </a>
@@ -115,23 +121,30 @@ export default function Index() {
           {/* Desktop links */}
           <ul className="hidden lg:flex items-center gap-10">
             {NAV.map(n => (
-              <li key={n.href}><a href={n.href} className="nav-item">{n.label}</a></li>
+              <li key={n.href}>
+                <a href={n.href} className={`nav-item transition-colors duration-300 ${
+                  scrolled ? "" : "!text-white/90 hover:!text-white"
+                }`}>{n.label}</a>
+              </li>
             ))}
           </ul>
 
           {/* CTA */}
           <a
             href="#contacts"
-            className="hidden lg:inline-flex items-center gap-2.5 border border-gold text-gold px-7 py-2.5
-                       font-sans-premium text-[0.65rem] tracking-[0.18em] uppercase
-                       hover:bg-gold hover:text-white transition-all duration-400"
+            className={`hidden lg:inline-flex items-center gap-2.5 px-7 py-2.5
+                       font-sans-premium text-[0.65rem] tracking-[0.18em] uppercase transition-all duration-300 ${
+              scrolled
+                ? "border border-gold text-gold hover:bg-gold hover:text-white"
+                : "border border-white/70 text-white hover:bg-white hover:text-foreground"
+            }`}
           >
             <Icon name="Phone" size={12} />
             Связаться
           </a>
 
           <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            <Icon name={menuOpen ? "X" : "Menu"} size={22} className="text-foreground" />
+            <Icon name={menuOpen ? "X" : "Menu"} size={22} className={scrolled ? "text-foreground" : "text-white"} />
           </button>
         </div>
 
