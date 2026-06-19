@@ -88,11 +88,8 @@ const CATALOG = [
   {
     icon:"BedDouble",  title:"Кровати",  sub:"Мягкие, с металлическим каркасом",  badge:"",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/dd29b822-9531-4b96-ad0a-3d3de3f14236.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/cbf4e453-b529-417c-be83-4ba2d8862a36.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/be6f6616-ce29-4ac5-b719-f309e01ed83d.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/28f56f17-33db-48d6-9e9e-c0269ca9ec45.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/887b5ca6-f519-416e-bda6-579eba4e7e58.jpg",
     ],
     desc: "Мягкие кровати с мягким изголовьем на сварном металлическом каркасе. Разные размеры: 140, 160, 180 см. Возможно исполнение с ящиком для хранения. Подходят для сетевых мебельных магазинов и отельного сегмента.",
     features: ["Размеры 140 / 160 / 180 см", "Изголовье — ткань, экокожа", "Вариант с подъёмным механизмом", "Партии для отельного сегмента"],
