@@ -78,11 +78,9 @@ const CATALOG = [
   {
     icon:"Sofa",  title:"Кресла",  sub:"Для дома и офиса",  badge:"",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/c9c54e20-e665-472d-9f09-aad1c338e3b8.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/bb1a85f5-8ce4-4abc-8591-bbf7678fe099.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/be6f6616-ce29-4ac5-b719-f309e01ed83d.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/7325a543-7ef1-4cea-a97c-9cfafe3d6a21.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/7f74a7a5-d083-46e7-81bb-5fea60e00390.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/b22f1204-de01-4f66-9127-4527cb4c66ba.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/6d05dd51-fc09-4774-a690-29ac327cfef5.png",
     ],
     desc: "Кресла для дома, переговорных и лобби. Широкая линейка форм: классика, скандинавский стиль, мягкий минимализм. Все модели — на металлических или деревянных ножках собственного производства.",
     features: ["Ножки — металл или пластик", "Широкая палитра обивки", "Жёсткий и мягкий вариант сиденья", "Малые и средние серии"],
