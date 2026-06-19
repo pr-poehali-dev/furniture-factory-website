@@ -118,11 +118,11 @@ const CATALOG = [
   {
     icon:"Layers",  title:"Ткань рогожка",  sub:"Собственное изготовление",  badge:"",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/7325a543-7ef1-4cea-a97c-9cfafe3d6a21.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/de1cae61-98db-4837-82f8-15b2a476e176.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/dd29b822-9531-4b96-ad0a-3d3de3f14236.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/9ee836d2-0d46-4dfd-be0b-83076c98646b.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/6022831b-cedf-4f9e-a717-0bfbf5b4e882.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/79c07d55-0ec5-4969-a7a6-2a4f0df955cc.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/3b4803a9-5781-4529-a2f5-602b108d0446.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/1c09d869-ce13-4497-bc4d-0a71a6bc9aaf.jpg",
     ],
     desc: "Производим фирменную ткань-рогожку с нуля — от нити до готового полотна. Плотная, износостойкая, с благородной текстурой. Используется во всей нашей мягкой мебели, доступна для заказа отдельными партиями.",
     features: ["Производство нити собственными силами", "Плотная износостойкая структура", "Широкая палитра цветов", "Поставка оптовыми партиями"],
