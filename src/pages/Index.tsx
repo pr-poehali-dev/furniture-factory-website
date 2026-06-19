@@ -106,11 +106,11 @@ const CATALOG = [
   {
     icon:"Circle",  title:"Коконы",  sub:"Подвесные кресла — новинка",  badge:"Новинка",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/01dacf89-913e-4fcc-9e09-285ef232c2fa.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/ec4c509b-1cf7-4ea8-85b3-993b8f771edd.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/ce3b32bd-815c-4a75-b346-5e44ee293fe6.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/87a80901-5fe0-4f57-8cda-3653bdc09e74.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/bb1a85f5-8ce4-4abc-8591-bbf7678fe099.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/821eee13-9709-4e5e-a22c-f85eea6d0234.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/bdc83376-4aa3-4afd-b291-ffebb590e9c7.png",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/97243112-c201-4ed2-959d-3ce5a839b8b6.png",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/65e48316-e9b8-407d-acbd-3c9ed49e89ac.png",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/e7b71494-4208-4b88-bb2b-d405d8a3b87e.png",
     ],
     desc: "Подвесные кресла-коконы из искусственного ротанга — наша новинка этого сезона. Стали одним из самых продаваемых товаров в категории садовой мебели. Подходят для улицы и закрытых помещений.",
     features: ["Искусственный ротанг ПВХ", "Металлический каркас-подставка в комплекте", "Для улицы и интерьера", "Хит продаж 2024–2025"],
