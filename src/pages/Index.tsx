@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const HERO_IMG    = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/6ff72b68-2ea7-436f-9b5f-d1dea06ccf53.jpg";
 const DETAIL_IMG  = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/9bcc3ae2-a064-4545-9183-8b8e2d49a6cc.jpg";
 const GARDEN_IMG  = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/01dacf89-913e-4fcc-9e09-285ef232c2fa.jpg";
-const FACTORY_IMG = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/3c0494b8-0186-4c8a-bd37-c650767e0a57.jpg";
+const FACTORY_IMG = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/674e26ac-8556-4981-9f6d-e53f615c1ab3.jpg";
 
 /* ── helpers ─────────────────────────────────── */
 function useInView(threshold = 0.12) {
