@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG    = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/6ff72b68-2ea7-436f-9b5f-d1dea06ccf53.jpg";
-const DETAIL_IMG  = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg";
+const DETAIL_IMG  = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/9bcc3ae2-a064-4545-9183-8b8e2d49a6cc.jpg";
 const GARDEN_IMG  = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/01dacf89-913e-4fcc-9e09-285ef232c2fa.jpg";
 const FACTORY_IMG = "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/3c0494b8-0186-4c8a-bd37-c650767e0a57.jpg";
 
@@ -59,7 +59,7 @@ const STEPS = [
   { n:"03", title:"Металлокаркас",      desc:"Сварные каркасы из металла собственного производства. Испытания на изгиб и нагрузку." },
   { n:"04", title:"Декор и опоры",      desc:"Пластиковые опоры и декоративные элементы — точное литьё, богатая палитра." },
   { n:"05", title:"Финальная сборка изделий", desc:"Комплектация и сборка всех изделий — от кроя ткани до готового продукта." },
-  { n:"06", title:"Упаковка изделия",         desc:"Фирменная упаковка каждого изделия перед отгрузкой заказчику." },
+  { n:"06", title:"Упаковка изделия",         desc:"Упаковка каждого изделия перед отгрузкой заказчику." },
 ];
 
 const CATALOG = [
@@ -182,7 +182,7 @@ export default function Index() {
             <span className={`font-serif text-2xl font-light tracking-[0.12em] leading-none transition-colors duration-300 ${
               scrolled ? "text-foreground" : "text-white"
             }`}>
-              Волжская мебельная<span className="text-gold"> мануфактура</span>
+              Волжская мебельная мануфактура
             </span>
             <span className={`font-sans-premium text-[0.55rem] tracking-[0.25em] uppercase mt-0.5 transition-colors duration-300 ${
               scrolled ? "text-muted-foreground" : "text-white/70"
@@ -521,7 +521,7 @@ export default function Index() {
                 {[
                   { icon:"Phone",  l:"Телефон",           v:"+7 (8422) 303680",          s:"Пн–Пт, 08:30–17:30" },
                   { icon:"Mail",   l:"Электронная почта", v:"info@vmm24.com",            s:"" },
-                  { icon:"MapPin", l:"Производство",      v:"г. Ульяновск, ул. Герасимова 10 стр 9", s:"" },
+                  { icon:"MapPin", l:"Адрес",             v:"г. Ульяновск, ул. Герасимова 10 стр 9", s:"" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-5 pb-5 border-b border-border last:border-0">
                     <div className="w-9 h-9 flex-shrink-0 border border-gold/30 flex items-center justify-center">
