@@ -66,11 +66,11 @@ const CATALOG = [
   {
     icon:"Armchair",  title:"Диваны",  sub:"Модульные, угловые, прямые",  badge:"Хит",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/7325a543-7ef1-4cea-a97c-9cfafe3d6a21.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/de1cae61-98db-4837-82f8-15b2a476e176.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/be6f6616-ce29-4ac5-b719-f309e01ed83d.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/1eabcb58-47e5-4742-94cb-bc2a1f61c331.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/4986b569-8444-4ee5-b35d-9a5d91539d76.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/e89614ec-14ce-49d6-8a48-acd0d37f933e.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/e9eece3c-0be2-42f0-90ae-71dd61f02fd0.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/f0b13a77-1939-474b-9d67-2af9d13c8193.jpg",
     ],
     desc: "Производим диваны всех форматов: прямые, угловые, модульные. Каркас — собственный металл, ткань — фирменная рогожка. Подходят для жилых и коммерческих пространств. Работаем на поставку крупным торговым сетям.",
     features: ["Металлокаркас собственного производства", "Ткань-рогожка или велюр", "Модульные и угловые конфигурации", "Оптовые партии от 50 шт."],
