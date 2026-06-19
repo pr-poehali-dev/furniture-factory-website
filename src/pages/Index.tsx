@@ -493,28 +493,24 @@ export default function Index() {
       {/* ── CONTACTS ────────────────────────────── */}
       <section id="contacts" className="py-32 bg-white">
         <div ref={s.contact.ref} className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-1 gap-20 max-w-2xl">
+          <div className="grid lg:grid-cols-2 gap-20 max-w-4xl">
 
-            {/* Left */}
+            {/* Работа */}
             <div className={`transition-all duration-1000 ${s.contact.inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
               <p className="font-sans-premium text-[0.6rem] tracking-[0.3em] uppercase text-gold mb-5 flex items-center gap-3">
                 <span className="w-8 h-px bg-gold inline-block" />
-                Партнёрство
+                Работа
               </p>
               <h2 className="font-serif text-5xl font-light leading-tight gold-line mb-10">
-                Станьте<br />
-                <em className="italic text-gradient-gold">нашим партнёром</em>
+                Присоединяйтесь<br />
+                <em className="italic text-gradient-gold">к нашей команде</em>
               </h2>
               <p className="font-sans-premium font-light text-muted-foreground text-sm leading-relaxed tracking-wide mb-10">
-                Работаем с оптовыми покупателями и торговыми сетями.
+                Ищем талантливых людей в производство и продажи.
               </p>
-
               <div className="space-y-5">
                 {[
-                  { icon:"Phone",  l:"По вопросам трудоустройства", v:"+7 (917) 630 44 64", s:"" },
-                  { icon:"Phone",  l:"По вопросам партнёрства",    v:"+7 (8422) 303680",  s:"Пн–Пт, 08:30–17:30" },
-                  { icon:"Mail",   l:"Электронная почта", v:"info@vmm24.com",            s:"" },
-                  { icon:"MapPin", l:"Адрес",             v:"г. Ульяновск, ул. Герасимова 10 стр 9", s:"" },
+                  { icon:"Phone", l:"По вопросам трудоустройства", v:"+7 (917) 630 44 64", s:"" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-5 pb-5 border-b border-border last:border-0">
                     <div className="w-9 h-9 flex-shrink-0 border border-gold/30 flex items-center justify-center">
@@ -530,6 +526,38 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Партнёрство */}
+            <div className={`transition-all duration-1000 delay-200 ${s.contact.inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
+              <p className="font-sans-premium text-[0.6rem] tracking-[0.3em] uppercase text-gold mb-5 flex items-center gap-3">
+                <span className="w-8 h-px bg-gold inline-block" />
+                Партнёрство
+              </p>
+              <h2 className="font-serif text-5xl font-light leading-tight gold-line mb-10">
+                Станьте<br />
+                <em className="italic text-gradient-gold">нашим партнёром</em>
+              </h2>
+              <p className="font-sans-premium font-light text-muted-foreground text-sm leading-relaxed tracking-wide mb-10">
+                Работаем с оптовыми покупателями и торговыми сетями.
+              </p>
+              <div className="space-y-5">
+                {[
+                  { icon:"Phone",  l:"По вопросам партнёрства", v:"+7 (8422) 303680",                   s:"Пн–Пт, 08:30–17:30" },
+                  { icon:"Mail",   l:"Электронная почта",       v:"info@vmm24.com",                      s:"" },
+                  { icon:"MapPin", l:"Адрес",                   v:"г. Ульяновск, ул. Герасимова 10 стр 9", s:"" },
+                ].map((c, i) => (
+                  <div key={i} className="flex items-start gap-5 pb-5 border-b border-border last:border-0">
+                    <div className="w-9 h-9 flex-shrink-0 border border-gold/30 flex items-center justify-center">
+                      <Icon name={c.icon} size={13} className="text-gold" />
+                    </div>
+                    <div>
+                      <div className="font-sans-premium text-[0.55rem] tracking-[0.22em] uppercase text-muted-foreground mb-1">{c.l}</div>
+                      <div className="font-sans-premium text-sm text-foreground">{c.v}</div>
+                      <div className="font-sans-premium text-[0.62rem] text-muted-foreground mt-0.5">{c.s}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
           </div>
         </div>
