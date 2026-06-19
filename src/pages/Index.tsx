@@ -506,7 +506,7 @@ export default function Index() {
                 <em className="italic text-gradient-gold">к нашей команде</em>
               </h2>
               <p className="font-sans-premium font-light text-muted-foreground text-sm leading-relaxed tracking-wide mb-10">
-                Ищем талантливых людей в производство и продажи.
+                Ищем талантливых, активных и ответственных людей в компанию.
               </p>
               <div className="space-y-5">
                 {[
