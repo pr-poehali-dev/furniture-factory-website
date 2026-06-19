@@ -97,11 +97,8 @@ const CATALOG = [
   {
     icon:"Trees",  title:"Садовая мебель",  sub:"Из искусственного ротанга",  badge:"Сезон",
     photos: [
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/87a80901-5fe0-4f57-8cda-3653bdc09e74.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/ce3b32bd-815c-4a75-b346-5e44ee293fe6.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/ec4c509b-1cf7-4ea8-85b3-993b8f771edd.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/bb1a85f5-8ce4-4abc-8591-bbf7678fe099.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/8cff0c34-9de5-470e-b0b0-f4fab7bb2a1e.jpg",
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/3834eb01-e5f4-4694-8038-2ba6afeb4ada.jpg",
     ],
     desc: "Комплекты для террас, веранд и загородных домов. Лоза из ПВХ — собственное производство. Устойчива к UV, морозу и влаге. Алюминиевый или стальной каркас с порошковым покрытием.",
     features: ["ПВХ-лоза собственного производства", "UV и морозостойкость", "Алюминиевый или стальной каркас", "Комплекты и отдельные предметы"],
