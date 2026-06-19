@@ -50,7 +50,6 @@ const NAV = [
 const STATS = [
   { value: 550, suffix: "+",  label: "изделий в день" },
   { value: 10,  suffix: "+",  label: "лет на рынке" },
-  { value: 6,   suffix: "",   label: "этапов цикла" },
   { value: 100, suffix: "%",  label: "своё производство" },
 ];
 
@@ -59,8 +58,8 @@ const STEPS = [
   { n:"02", title:"Ткань-рогожка",      desc:"Из нити — фирменная рогожка. Плотная, износостойкая, с благородной текстурой." },
   { n:"03", title:"Металлокаркас",      desc:"Сварные каркасы из металла собственного производства. Испытания на изгиб и нагрузку." },
   { n:"04", title:"Декор и опоры",      desc:"Пластиковые опоры и декоративные элементы — точное литьё, богатая палитра." },
-  { n:"05", title:"Лоза ротанга",       desc:"ПВХ-лоза для садовой мебели: UV-стойкая, морозоустойчивая, долговечная." },
-  { n:"06", title:"Сборка и упаковка",  desc:"Финальная сборка всех изделий — от кроя ткани до фирменной упаковки." },
+  { n:"05", title:"Финальная сборка изделий", desc:"Комплектация и сборка всех изделий — от кроя ткани до готового продукта." },
+  { n:"06", title:"Упаковка изделия",         desc:"Фирменная упаковка каждого изделия перед отгрузкой заказчику." },
 ];
 
 const CATALOG = [
@@ -125,16 +124,16 @@ const CATALOG = [
     features: ["Искусственный ротанг ПВХ", "Металлический каркас-подставка в комплекте", "Для улицы и интерьера", "Хит продаж 2024–2025"],
   },
   {
-    icon:"Settings",  title:"Под заказ",  sub:"Индивидуальные партии для сетей",  badge:"",
+    icon:"Layers",  title:"Ткань рогожка",  sub:"Собственное изготовление",  badge:"",
     photos: [
+      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
       "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/b404ae03-3f95-4ed4-b475-d2d62428a2e7.jpg",
       "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/7325a543-7ef1-4cea-a97c-9cfafe3d6a21.jpg",
       "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/de1cae61-98db-4837-82f8-15b2a476e176.jpg",
-      "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/75e05f22-3037-439e-a4a2-34684d8ff26b.jpg",
       "https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/files/dd29b822-9531-4b96-ad0a-3d3de3f14236.jpg",
     ],
-    desc: "Разрабатываем и производим мебель по техническому заданию заказчика. Работаем с сетевыми ретейлерами, девелоперами и крупными b2b-клиентами. От эскиза до серийного производства — всё под одной крышей.",
-    features: ["Разработка по ТЗ заказчика", "Собственный дизайн-отдел", "Производство от 100 единиц", "Сопровождение поставки"],
+    desc: "Производим фирменную ткань-рогожку с нуля — от нити до готового полотна. Плотная, износостойкая, с благородной текстурой. Используется во всей нашей мягкой мебели, доступна для заказа отдельными партиями.",
+    features: ["Производство нити собственными силами", "Плотная износостойкая структура", "Широкая палитра цветов", "Поставка оптовыми партиями"],
   },
 ];
 
@@ -183,7 +182,7 @@ export default function Index() {
             <span className={`font-serif text-2xl font-light tracking-[0.12em] leading-none transition-colors duration-300 ${
               scrolled ? "text-foreground" : "text-white"
             }`}>
-              МЕБЕЛЬ<span className="text-gold">ФАБРИКА</span>
+              Волжская мебельная<span className="text-gold"> мануфактура</span>
             </span>
             <span className={`font-sans-premium text-[0.55rem] tracking-[0.25em] uppercase mt-0.5 transition-colors duration-300 ${
               scrolled ? "text-muted-foreground" : "text-white/70"
@@ -502,7 +501,7 @@ export default function Index() {
       {/* ── CONTACTS ────────────────────────────── */}
       <section id="contacts" className="py-32 bg-white">
         <div ref={s.contact.ref} className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-1 gap-20 max-w-2xl">
 
             {/* Left */}
             <div className={`transition-all duration-1000 ${s.contact.inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
@@ -515,14 +514,14 @@ export default function Index() {
                 <em className="italic text-gradient-gold">нашим партнёром</em>
               </h2>
               <p className="font-sans-premium font-light text-muted-foreground text-sm leading-relaxed tracking-wide mb-10">
-                Работаем с оптовыми покупателями и торговыми сетями. Оставьте заявку — менеджер свяжется в течение рабочего часа.
+                Работаем с оптовыми покупателями и торговыми сетями.
               </p>
 
               <div className="space-y-5">
                 {[
-                  { icon:"Phone",  l:"Телефон",       v:"+7 (___) ___-__-__",   s:"Пн–Пт, 9:00–18:00" },
-                  { icon:"Mail",   l:"Электронная почта", v:"info@factory.ru",  s:"Ответим в течение часа" },
-                  { icon:"MapPin", l:"Производство",  v:"Укажите адрес",         s:"Производственный цех" },
+                  { icon:"Phone",  l:"Телефон",           v:"+7 (8422) 303680",          s:"Пн–Пт, 08:30–17:30" },
+                  { icon:"Mail",   l:"Электронная почта", v:"info@vmm24.com",            s:"" },
+                  { icon:"MapPin", l:"Производство",      v:"г. Ульяновск, ул. Герасимова 10 стр 9", s:"" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-5 pb-5 border-b border-border last:border-0">
                     <div className="w-9 h-9 flex-shrink-0 border border-gold/30 flex items-center justify-center">
@@ -538,69 +537,7 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right: form */}
-            <div className={`transition-all duration-1000 delay-300 ${s.contact.inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
-              {sent ? (
-                <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                  <div className="w-14 h-14 border border-gold flex items-center justify-center mb-6">
-                    <Icon name="Check" size={22} className="text-gold" />
-                  </div>
-                  <h3 className="font-serif text-3xl font-light mb-3">Заявка получена</h3>
-                  <p className="font-sans-premium text-[0.65rem] tracking-wide text-muted-foreground">
-                    Мы свяжемся с вами в ближайшее время.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={e => { e.preventDefault(); setSent(true); }} className="space-y-5">
-                  {[
-                    { label:"Ваше имя",  key:"name",    type:"text",  ph:"Иван Иванов" },
-                    { label:"Телефон",   key:"phone",   type:"tel",   ph:"+7 (___) ___-__-__" },
-                  ].map(f => (
-                    <div key={f.key}>
-                      <label className="font-sans-premium text-[0.58rem] tracking-[0.22em] uppercase text-muted-foreground block mb-2">
-                        {f.label}
-                      </label>
-                      <input
-                        type={f.type}
-                        required
-                        placeholder={f.ph}
-                        value={form[f.key as keyof typeof form]}
-                        onChange={e => setForm({ ...form, [f.key]: e.target.value })}
-                        className="w-full border-b border-border bg-transparent py-3 font-sans-premium text-sm text-foreground
-                                   placeholder:text-muted-foreground/40 focus:outline-none focus:border-gold transition-colors duration-300"
-                      />
-                    </div>
-                  ))}
-                  <div>
-                    <label className="font-sans-premium text-[0.58rem] tracking-[0.22em] uppercase text-muted-foreground block mb-2">
-                      Сообщение
-                    </label>
-                    <textarea
-                      rows={4}
-                      placeholder="Расскажите о вашем запросе..."
-                      value={form.message}
-                      onChange={e => setForm({ ...form, message: e.target.value })}
-                      className="w-full border-b border-border bg-transparent py-3 font-sans-premium text-sm text-foreground
-                                 placeholder:text-muted-foreground/40 focus:outline-none focus:border-gold transition-colors duration-300 resize-none"
-                    />
-                  </div>
 
-                  <div className="pt-4">
-                    <button
-                      type="submit"
-                      className="w-full bg-gold text-white py-4 font-sans-premium text-[0.68rem] tracking-[0.22em] uppercase
-                                 hover:bg-gold-light transition-colors duration-400 flex items-center justify-center gap-3"
-                    >
-                      <Icon name="Send" size={13} />
-                      Отправить заявку
-                    </button>
-                    <p className="font-sans-premium text-[0.55rem] text-muted-foreground text-center mt-3 tracking-wide">
-                      Нажимая кнопку, вы принимаете политику конфиденциальности
-                    </p>
-                  </div>
-                </form>
-              )}
-            </div>
           </div>
         </div>
       </section>
@@ -611,7 +548,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
               <div className="font-serif text-xl font-light tracking-[0.1em] text-white mb-3">
-                МЕБЕЛЬ<span className="text-gradient-gold">ФАБРИКА</span>
+                Волжская мебельная<span className="text-gradient-gold"> мануфактура</span>
               </div>
               <p className="font-sans-premium text-[0.62rem] tracking-wide leading-relaxed">
                 Полный цикл производства мягкой<br />и садовой мебели с 2016 года.
@@ -643,7 +580,7 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-wrap items-center justify-between gap-4">
-            <p className="font-sans-premium text-[0.58rem] tracking-wide">© 2016–2026 МебельФабрика. Все права защищены.</p>
+            <p className="font-sans-premium text-[0.58rem] tracking-wide">© 2016–2026 Волжская мебельная мануфактура. Все права защищены.</p>
             <p className="font-sans-premium text-[0.58rem] tracking-wide">Политика конфиденциальности</p>
           </div>
         </div>
