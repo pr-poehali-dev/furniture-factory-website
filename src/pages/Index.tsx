@@ -170,7 +170,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#home" className="flex flex-col">
+          <a href="#home" className="flex items-center gap-3">
+            <img src="https://cdn.poehali.dev/projects/1c5d3218-1ab5-4a1f-ac32-40770b70a351/bucket/f3cc5ba6-7e21-4648-8024-765d0af1c697.png" alt="Логотип" className="h-10 w-10 object-contain flex-shrink-0" />
+            <div className="flex flex-col">
             <span className={`font-serif text-2xl font-light tracking-[0.12em] leading-none transition-colors duration-300 ${
               scrolled ? "text-foreground" : "text-white"
             }`}>
@@ -181,6 +183,7 @@ export default function Index() {
             }`}>
               Производство полного цикла · с 2016
             </span>
+            </div>
           </a>
 
           {/* Desktop links */}
